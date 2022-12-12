@@ -40,57 +40,7 @@ function startGame(){
     contexto.stroke(); //Dibujar el cuadriculado
     let rememberLetter = undefined
 }
-let keyboard = function(e){
-    if ((event.key === "s") || (event.key === "S") || (event.key === "w") || (event.key === "W") || ((event.key === "a") || (event.key === "A") || ((event.key === "d") || (event.key === "D")))){
-        document.removeEventListener("keydown",keyboard,false)
-        setTimeout(() => {
-            addEvent()
-            if ((actualX == premioX) && (actualY == premioY)){//Si se consigue el premio:
-                puntos++
-                tiempo = tiempo + 3
-                tiempo.textContent = "Puntos : " + puntos
-                premios.textContent = "Puntos : " + puntos
-                respawnReward()
-            }
-        }, speed);
-    }
-    if ((event.key === "s") || (event.key === "S")){
-        console.log("Abajo")
-        if (actualY + 32 > 448){}
-        else{
-            contexto.clearRect(actualX,actualY,31,31)
-            actualY = actualY + 32
-            contexto.fillRect(actualX,actualY,32,32)
-        }
-    }
-    if ((event.key === "w") || (event.key === "W")){
-        console.log("Arriba")
-        if (actualY - 32 < 0){}
-        else{
-            contexto.clearRect(actualX,actualY,31,31)
-            actualY = actualY - 32
-            contexto.fillRect(actualX,actualY,32,32)
-        }
-    }
-    if ((event.key === "a") || (event.key === "A")){
-        console.log("Izquierda")
-        if (actualX - 32 < 0){}
-        else{
-            contexto.clearRect(actualX,actualY,31,31)
-            actualX = actualX - 32
-            contexto.fillRect(actualX,actualY,32,32)
-        }
-    }
-    if ((event.key === "d") || (event.key === "D")){
-        console.log("Derecha")
-        if (actualX + 32 > 992){}
-        else{
-            contexto.clearRect(actualX,actualY,31,31)
-            actualX = actualX + 32
-            contexto.fillRect(actualX,actualY,32,32)
-            }
-        }
-    }
+
 function addEvent(){
     if (tiempo>0){
         document.addEventListener("keydown",keyboard,false)
