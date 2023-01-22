@@ -1,0 +1,93 @@
+*{
+    user-select: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+@keyframes borr {
+    100%{border: 15px solid blue;}
+
+    0%{border: 15px solid red;}
+}     
+#dibu{
+    display:flex;
+    position: relative;
+    border: 10px solid red;
+    min-height: 600px;
+}
+#dibu #title{
+    position: absolute;
+    left: 450px;
+    font-size: xx-large;
+    
+}
+canvas{
+    background-image: url(https://www.lavanguardia.com/files/article_main_microformat/uploads/2021/04/09/606ffcccb78a0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation-name: borr;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode:both;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+#dibu #puntos{
+    position: absolute;
+    font-size: xx-large;
+    top: 300px;
+    text-decoration: underline;
+    color: yellow;
+    background-color: black;
+    
+}
+
+@keyframes borr {
+    100%{border: 15px solid blue;}
+
+    0%{border: 15px solid rgb(255, 72, 0);}
+}     
+
+#start{
+    top: 45px;
+    font-size: 65px;
+    background: rgb(255,0,0);
+    background: radial-gradient(circle, rgba(255,0,0,0.4458158263305322) 53%, rgba(223,0,255,0.4542191876750701) 56%);
+    position: absolute;
+    z-index: 10;
+
+}
+#start:hover{
+    background: rgb(223,0,255);
+    background: radial-gradient(circle, rgba(223,0,255,1) 52%, rgba(255,0,0,0.4458158263305322) 56%);
+    color: green;
+}
+#time{
+    position: absolute;
+    left: 25px;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-color: crimson;
+}
+
+@keyframes off {
+    100%{opacity: 20%;
+        transform: rotate(9deg);
+        
+    }
+
+    0%{opacity: 30%;
+        transform: rotate(-9deg); 
+    }
+}
+.off{
+    animation-name: off;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
